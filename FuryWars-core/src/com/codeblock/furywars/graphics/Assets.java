@@ -7,13 +7,13 @@ public class Assets {
 	public Texture fireblast;
 	public Texture forground;
 	public Texture logoScreen;
-	public Texture mainMenuScreen;
+	public Texture playBtn;
 	
 	public Assets(){
 		player = new Texture("Player.png");
 		fireblast = new Texture("fireblast.png");
 		forground = new Texture("forground.png");
-		logoScreen = new Texture("logoScreen.png");
-		mainMenuScreen = new Texture("mainMenuScreen.png");
+		logoScreen = new Texture("Logo.png");
+		playBtn = new Texture("play.png");
 	}
 }

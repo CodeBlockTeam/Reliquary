@@ -14,15 +14,15 @@ public class LogoScreen extends ScreenAdapter {
 	
 	@Override
 	public void render (float delta) {
-		if(Gdx.input.isTouched()){
+		if(Gdx.input.justTouched()){
 			game.setScreen(new MainMenuScreen(game));
 		}
 		GL20 gl = Gdx.gl;
-		gl.glClearColor(1, 0, 0, 1);
+		gl.glClearColor(1, 1, 1, 1);
 		gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 		
 		game.batch.begin();
-		game.batch.draw(game.assets.logoScreen, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		game.batch.draw(game.assets.logoScreen, Gdx.graphics.getWidth()/4, 0, Gdx.graphics.getWidth()/2, Gdx.graphics.getHeight());
 		game.batch.end();	
 	}
 }
