@@ -1,19 +1,18 @@
 package com.codeblock.furywars.graphics;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 
 public class Assets {
-	public Texture player;
-	public Texture fireblast;
-	public Texture forground;
 	public Texture logoScreen;
-	public Texture playBtn;
+	public Texture button;
+	
+	public BitmapFont font;
 	
 	public Assets(){
-		player = new Texture("Player.png");
-		fireblast = new Texture("fireblast.png");
-		forground = new Texture("forground.png");
-		logoScreen = new Texture("Logo.png");
-		playBtn = new Texture("play.png");
+		logoScreen = new Texture("logoScreen.png");
+		button = new Texture("butt-on.png"); //Had to!
+		
+		font = new BitmapFont();
 	}
 }
