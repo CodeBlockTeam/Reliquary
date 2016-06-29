@@ -121,7 +121,7 @@ image_alpha = 0
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>room_goto(rm_desert)
+            <string>room_goto(rm_choose_character)
 </string>
           </argument>
         </arguments>

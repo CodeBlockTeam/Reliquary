@@ -76,11 +76,17 @@ arrows = 999
             <kind>1</kind>
             <string>/// Movement
 if keyboard_check(ord("A")) and place_free (x + 4,y) {
-    sprite_index = spr_archer_left
-    x -= 4
+    if keyboard_check(vk_shift){
+        sprite_index = spr_archer_left
+        x -= 8
+    }else{
+        sprite_index = spr_archer_left
+        x -= 4
+    }
+    
 }
 if keyboard_check(ord("W")) and place_free (x,y - 4) {
-sprite_index = spr_archer_back
+    sprite_index = spr_archer_back
     y -= 4
 }
 if keyboard_check(ord("S")) and place_free (x,y + 4) {
@@ -114,20 +120,21 @@ if keyboard_check(ord("D")) and place_free (x + 4,y) {
           <argument>
             <kind>1</kind>
             <string>/// checking for arrows
-if keyboard_check(vk_left) and can_shoot = true and arrows &gt;= 1 and instance_number(obj_arrow) = 0 {
+if keyboard_check(vk_space) and can_shoot = true and arrows &gt; 0 and instance_number(obj_arrow) = 0 {
     script_execute(scr_arrow,1)
-    arrows -= 1
-}
-if keyboard_check(vk_right) and can_shoot = true and arrows &gt;= 1 and instance_number(obj_arrow) = 0 {
-    script_execute(scr_arrow,2)
-    arrows -= 1
-}
-if keyboard_check(vk_down) and can_shoot = true and arrows &gt;= 1 and instance_number(obj_arrow) = 0 {
-    script_execute(scr_arrow,3)
-    arrows -= 1
-}
-if keyboard_check(vk_up) and can_shoot = true and arrows &gt;= 1 and instance_number(obj_arrow) = 0 {
-    script_execute(scr_arrow,4)
+    if(sprite_index == spr_archer_front){
+        script_execute(scr_arrow,3)
+    }
+    if(sprite_index == spr_archer_back){
+        script_execute(scr_arrow,4)
+    }
+    if(sprite_index == spr_archer_left){
+        script_execute(scr_arrow,1)
+    }
+    if(sprite_index == spr_archer_right){
+        script_execute(scr_arrow,2)
+    }
+    
     arrows -= 1
 }
 </string>
