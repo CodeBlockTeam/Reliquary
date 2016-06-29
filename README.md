@@ -1,3 +1,3 @@
 # FuryWars
 
-This is made in two different versions, libGdx and GameMaker: Studio. Choose wisely because there both exactly the same...
+This is made in GameMaker: Studio.
