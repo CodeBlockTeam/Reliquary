@@ -23,6 +23,7 @@
     <sprites name="Floors">
       <sprite>sprites\spr_desertfloor</sprite>
     </sprites>
+    <sprite>sprites\spr_charbox</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bk_title</background>
@@ -34,10 +35,7 @@
     <script>scripts\scr_text.gml</script>
   </scripts>
   <objects name="objects">
-    <objects name="menu_choose_object">
-      <object>objects\obj_option_archer</object>
-    </objects>
-    <object>objects\obj_player_archer</object>
+    <object>objects\obj_player</object>
     <objects name="Menu">
       <object>objects\obj_menu</object>
       <object>objects\obj_play</object>
@@ -49,12 +47,12 @@
       <object>objects\obj_desertfloor</object>
     </objects>
     <object>objects\obj_arrow</object>
+    <object>objects\draw</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title</room>
     <room>rooms\rm_desert</room>
     <room>rooms\rm_options</room>
-    <room>rooms\rm_choose_character</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
